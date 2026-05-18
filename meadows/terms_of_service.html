@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — Meadows</title>
+<style>
+  :root {
+    --primary: #378ADD;
+    --primary-light: #E6F1FB;
+    --primary-dark: #0C447C;
+    --accent: #1D9E75;
+    --accent-light: #E1F5EE;
+    --text: #1a1a1a;
+    --text-secondary: #5a6a7a;
+    --border: #B5D4F4;
+    --surface: #f8fbff;
+    --card: #ffffff;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --primary: #85B7EB;
+      --primary-light: #042C53;
+      --primary-dark: #B5D4F4;
+      --accent: #5DCAA5;
+      --accent-light: #04342C;
+      --text: #f0f0f0;
+      --text-secondary: #9aa5b4;
+      --border: #185FA5;
+      --surface: #0a1929;
+      --card: #0f2035;
+    }
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--surface);
+    color: var(--text);
+    line-height: 1.75;
+    font-size: 16px;
+    padding: 0 0 80px;
+  }
+
+  header {
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    padding: 32px 24px 24px;
+    text-align: center;
+  }
+
+  .logo-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    background: var(--primary-light);
+    border-radius: 14px;
+    margin-bottom: 16px;
+  }
+
+  .logo-mark svg {
+    width: 28px;
+    height: 28px;
+    fill: var(--primary);
+  }
+
+  header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: -0.3px;
+  }
+
+  header p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-top: 6px;
+  }
+
+  .badge {
+    display: inline-block;
+    background: var(--primary-light);
+    color: var(--primary-dark);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-top: 12px;
+    border: 1px solid var(--border);
+  }
+
+  main {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .toc {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 32px 0 24px;
+  }
+
+  .toc p {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+  }
+
+  .toc ol {
+    padding-left: 18px;
+  }
+
+  .toc li {
+    font-size: 14px;
+    padding: 3px 0;
+  }
+
+  .toc a {
+    color: var(--primary);
+    text-decoration: none;
+  }
+
+  .toc a:hover {
+    text-decoration: underline;
+  }
+
+  section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 28px;
+    margin-bottom: 16px;
+  }
+
+  section h2 {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--primary-dark);
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  section h2 .num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: var(--primary-light);
+    color: var(--primary);
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  section p {
+    font-size: 15px;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+
+  section p:last-child {
+    margin-bottom: 0;
+  }
+
+  section ul {
+    padding-left: 20px;
+    margin: 10px 0 12px;
+  }
+
+  section ul li {
+    font-size: 15px;
+    color: var(--text);
+    padding: 4px 0;
+  }
+
+  .highlight {
+    background: var(--accent-light);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    padding: 14px 18px;
+    margin: 14px 0;
+    font-size: 14px;
+    color: var(--text);
+  }
+
+  .contact-box {
+    background: var(--primary-light);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+  }
+
+  .contact-box svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--primary);
+    flex-shrink: 0;
+  }
+
+  .contact-box a {
+    color: var(--primary);
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-top: 40px;
+    padding: 0 20px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo-mark">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/>
+    </svg>
+  </div>
+  <h1>Terms of Service</h1>
+  <p>Meadows — Focus & Habit App</p>
+  <span class="badge">Effective: May 16, 2026</span>
+</header>
+
+<main>
+
+  <div class="toc">
+    <p>Contents</p>
+    <ol>
+      <li><a href="#acceptance">Acceptance of terms</a></li>
+      <li><a href="#eligibility">Eligibility</a></li>
+      <li><a href="#account">Your account</a></li>
+      <li><a href="#use">Acceptable use</a></li>
+      <li><a href="#content">User content</a></li>
+      <li><a href="#data">Data and privacy</a></li>
+      <li><a href="#third-party">Third-party services</a></li>
+      <li><a href="#disclaimers">Disclaimers</a></li>
+      <li><a href="#limitation">Limitation of liability</a></li>
+      <li><a href="#changes">Changes to these terms</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </div>
+
+  <section id="acceptance">
+    <h2><span class="num">1</span> Acceptance of terms</h2>
+    <p>By downloading, installing, or using Meadows ("the App"), you agree to be bound by these Terms of Service. If you do not agree, please do not use the App.</p>
+    <p>These terms apply to all users of the App, regardless of age or location.</p>
+  </section>
+
+  <section id="eligibility">
+    <h2><span class="num">2</span> Eligibility</h2>
+    <p>Meadows is intended for users of all ages. Users under the age of 13 must have verifiable parental or guardian consent before using the App. By using the App, you represent that you either:</p>
+    <ul>
+      <li>Are 13 years of age or older, or</li>
+      <li>Have obtained consent from a parent or legal guardian</li>
+    </ul>
+    <p>We do not knowingly collect personal data from children under 13 without parental consent.</p>
+  </section>
+
+  <section id="account">
+    <h2><span class="num">3</span> Your account</h2>
+    <p>Meadows currently operates without a required user account or login. Your data is stored locally on your device and identified by an automatically generated device identifier.</p>
+    <p>You may set a display name within the App. You are responsible for any content you enter, including your display name, which must comply with Section 4 (Acceptable Use).</p>
+    <div class="highlight">Your display name and profile picture are stored locally on your device only. They are not transmitted to our servers.</div>
+  </section>
+
+  <section id="use">
+    <h2><span class="num">4</span> Acceptable use</h2>
+    <p>You agree not to use the App to:</p>
+    <ul>
+      <li>Violate any applicable laws or regulations</li>
+      <li>Enter display names or content that is offensive, hateful, or inappropriate</li>
+      <li>Attempt to reverse-engineer, modify, or tamper with the App</li>
+      <li>Interfere with the App's normal operation</li>
+    </ul>
+    <p>We reserve the right to update the App at any time. Continued use after an update constitutes acceptance of any changes.</p>
+  </section>
+
+  <section id="content">
+    <h2><span class="num">5</span> User content</h2>
+    <p>Any content you create within the App — including tasks, tags, display names, and profile pictures selected from your device — remains yours. We do not claim ownership over your content.</p>
+    <p>Profile pictures are selected by you from your device gallery. We access your gallery solely for this purpose and with your explicit permission. Pictures are stored locally on your device and are not uploaded to any server.</p>
+  </section>
+
+  <section id="data">
+    <h2><span class="num">6</span> Data and privacy</h2>
+    <p>Your privacy matters to us. Please review our <a href="privacy_policy.html" style="color: var(--primary);">Privacy Policy</a> for a full description of how we collect, use, and protect your data.</p>
+    <p>In summary:</p>
+    <ul>
+      <li>All app data (tasks, sessions, preferences) is stored locally on your device</li>
+      <li>We use Sentry to automatically collect crash reports and performance data to improve app stability</li>
+      <li>Sentry data may include a randomly generated device identifier (UUID) — it does not include your name or contact details</li>
+      <li>We do not sell your data to third parties</li>
+      <li>We do not display advertisements</li>
+    </ul>
+  </section>
+
+  <section id="third-party">
+    <h2><span class="num">7</span> Third-party services</h2>
+    <p>The App uses the following third-party service:</p>
+    <ul>
+      <li><strong>Sentry</strong> — error monitoring and crash reporting. Sentry collects technical crash data and performance metrics to help us fix bugs. Sentry's privacy policy is available at <a href="https://sentry.io/privacy/" style="color: var(--primary);">sentry.io/privacy</a>.</li>
+    </ul>
+    <p>The App is distributed through <strong>Google Play</strong>. Google's terms of service apply to the download and installation of the App.</p>
+    <p>We are not responsible for the practices of these third-party services.</p>
+  </section>
+
+  <section id="disclaimers">
+    <h2><span class="num">8</span> Disclaimers</h2>
+    <p>The App is provided "as is" and "as available" without warranties of any kind, express or implied. We do not warrant that:</p>
+    <ul>
+      <li>The App will be uninterrupted, error-free, or free of bugs</li>
+      <li>Any defects will be corrected</li>
+      <li>The App will meet your specific requirements</li>
+    </ul>
+    <p>Use of the App is at your own risk.</p>
+  </section>
+
+  <section id="limitation">
+    <h2><span class="num">9</span> Limitation of liability</h2>
+    <p>To the fullest extent permitted by law, Meadows and its developers shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the App, including but not limited to loss of data.</p>
+    <p>Our total liability for any claim arising from your use of the App shall not exceed the amount you paid for the App (which, as the App is free, is zero).</p>
+  </section>
+
+  <section id="changes">
+    <h2><span class="num">10</span> Changes to these terms</h2>
+    <p>We may update these Terms of Service from time to time. When we do, we will update the effective date at the top of this page and notify you within the App before the new terms take effect.</p>
+    <p>Your continued use of the App after changes are posted constitutes your acceptance of the updated terms.</p>
+  </section>
+
+  <section id="contact">
+    <h2><span class="num">11</span> Contact</h2>
+    <p>If you have any questions about these Terms of Service, please contact us:</p>
+    <div class="contact-box">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+      </svg>
+      <span>Email: <a href="mailto:meadowsappteam@gmail.com">meadowsappteam@gmail.com</a></span>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Meadows. All rights reserved.</p>
+  <p style="margin-top: 6px;"><a href="privacy_policy.html" style="color: var(--primary); text-decoration: none;">Privacy Policy</a></p>
+</footer>
+
+</body>
+</html>

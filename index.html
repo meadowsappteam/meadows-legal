@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meadows</title>
+<style>
+  :root {
+    --primary: #378ADD;
+    --primary-light: #E6F1FB;
+    --primary-dark: #0C447C;
+    --accent: #1D9E75;
+    --accent-light: #E1F5EE;
+    --amber: #BA7517;
+    --amber-light: #FAEEDA;
+    --text: #1a1a1a;
+    --text-secondary: #5a6a7a;
+    --border: #B5D4F4;
+    --surface: #f8fbff;
+    --card: #ffffff;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --primary: #85B7EB;
+      --primary-light: #042C53;
+      --primary-dark: #B5D4F4;
+      --accent: #5DCAA5;
+      --accent-light: #04342C;
+      --amber: #EF9F27;
+      --amber-light: #412402;
+      --text: #f0f0f0;
+      --text-secondary: #9aa5b4;
+      --border: #185FA5;
+      --surface: #0a1929;
+      --card: #0f2035;
+    }
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--surface);
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  .container {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 32px;
+    padding: 48px 24px;
+    max-width: 360px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  }
+
+  .app-icon {
+    width: 96px;
+    height: 96px;
+    border-radius: 22px;
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+
+  h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 32px;
+    letter-spacing: -0.5px;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .link-item {
+    display: block;
+    padding: 14px;
+    background: var(--primary-light);
+    color: var(--primary-dark);
+    text-decoration: none;
+    border-radius: 14px;
+    font-weight: 600;
+    font-size: 15px;
+    border: 1px solid var(--border);
+    transition: all 0.2s ease;
+  }
+
+  .link-item:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    transform: translateY(-1px);
+  }
+
+  footer {
+    margin-top: 48px;
+    font-size: 12px;
+    color: var(--text-secondary);
+    letter-spacing: 0.3px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <img src="meadows/app_launcher_icon.png" alt="Meadows Icon" class="app-icon">
+  <h1>Meadows</h1>
+  
+  <div class="links">
+    <a href="meadows/privacy_policy.html" class="link-item">Privacy Policy</a>
+    <a href="meadows/terms_of_service.html" class="link-item">Terms of Service</a>
+  </div>
+
+  <footer>
+    &copy; 2026 Meadows
+  </footer>
+</div>
+
+</body>
+</html>

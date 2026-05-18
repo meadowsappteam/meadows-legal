@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Meadows</title>
+<style>
+  :root {
+    --primary: #378ADD;
+    --primary-light: #E6F1FB;
+    --primary-dark: #0C447C;
+    --accent: #1D9E75;
+    --accent-light: #E1F5EE;
+    --amber: #BA7517;
+    --amber-light: #FAEEDA;
+    --text: #1a1a1a;
+    --text-secondary: #5a6a7a;
+    --border: #B5D4F4;
+    --surface: #f8fbff;
+    --card: #ffffff;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --primary: #85B7EB;
+      --primary-light: #042C53;
+      --primary-dark: #B5D4F4;
+      --accent: #5DCAA5;
+      --accent-light: #04342C;
+      --amber: #EF9F27;
+      --amber-light: #412402;
+      --text: #f0f0f0;
+      --text-secondary: #9aa5b4;
+      --border: #185FA5;
+      --surface: #0a1929;
+      --card: #0f2035;
+    }
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--surface);
+    color: var(--text);
+    line-height: 1.75;
+    font-size: 16px;
+    padding: 0 0 80px;
+  }
+
+  header {
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    padding: 32px 24px 24px;
+    text-align: center;
+  }
+
+  .logo-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    background: var(--accent-light);
+    border-radius: 14px;
+    margin-bottom: 16px;
+  }
+
+  .logo-mark svg {
+    width: 28px;
+    height: 28px;
+    fill: var(--accent);
+  }
+
+  header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: -0.3px;
+  }
+
+  header p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-top: 6px;
+  }
+
+  .badge {
+    display: inline-block;
+    background: var(--primary-light);
+    color: var(--primary-dark);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-top: 12px;
+    border: 1px solid var(--border);
+  }
+
+  main {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+    margin: 32px 0 24px;
+  }
+
+  .summary-tile {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+  }
+
+  .summary-tile .icon {
+    font-size: 24px;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .summary-tile .label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .summary-tile .desc {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.4;
+  }
+
+  .toc {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+  }
+
+  .toc p {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+  }
+
+  .toc ol {
+    padding-left: 18px;
+  }
+
+  .toc li {
+    font-size: 14px;
+    padding: 3px 0;
+  }
+
+  .toc a {
+    color: var(--primary);
+    text-decoration: none;
+  }
+
+  .toc a:hover { text-decoration: underline; }
+
+  section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 16px;
+  }
+
+  section h2 {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--primary-dark);
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  section h2 .num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: var(--primary-light);
+    color: var(--primary);
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  section p {
+    font-size: 15px;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+
+  section p:last-child { margin-bottom: 0; }
+
+  section ul {
+    padding-left: 20px;
+    margin: 10px 0 12px;
+  }
+
+  section ul li {
+    font-size: 15px;
+    color: var(--text);
+    padding: 4px 0;
+  }
+
+  .highlight {
+    background: var(--accent-light);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    padding: 14px 18px;
+    margin: 14px 0;
+    font-size: 14px;
+    color: var(--text);
+  }
+
+  .warning {
+    background: var(--amber-light);
+    border-left: 3px solid var(--amber);
+    border-radius: 0 8px 8px 0;
+    padding: 14px 18px;
+    margin: 14px 0;
+    font-size: 14px;
+    color: var(--text);
+  }
+
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 14px;
+  }
+
+  .data-table th {
+    text-align: left;
+    padding: 10px 12px;
+    background: var(--primary-light);
+    color: var(--primary-dark);
+    font-weight: 600;
+    font-size: 13px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .data-table th:first-child { border-radius: 8px 0 0 0; }
+  .data-table th:last-child { border-radius: 0 8px 0 0; }
+
+  .data-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    color: var(--text);
+    line-height: 1.5;
+  }
+
+  .data-table tr:last-child td { border-bottom: none; }
+
+  .pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 10px;
+    white-space: nowrap;
+  }
+
+  .pill-local {
+    background: var(--accent-light);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+  }
+
+  .pill-sentry {
+    background: var(--amber-light);
+    color: var(--amber);
+    border: 1px solid var(--amber);
+  }
+
+  .contact-box {
+    background: var(--primary-light);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+  }
+
+  .contact-box svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--primary);
+    flex-shrink: 0;
+  }
+
+  .contact-box a {
+    color: var(--primary);
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-top: 40px;
+    padding: 0 20px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo-mark">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 1C8.676 1 6 3.676 6 7c0 2.748 1.718 5.095 4.143 6.097A8.994 8.994 0 0 0 3 22h2a7 7 0 0 1 14 0h2a8.994 8.994 0 0 0-7.143-8.903C16.282 12.095 18 9.748 18 7c0-3.324-2.676-6-6-6zm0 2c2.276 0 4 1.724 4 4s-1.724 4-4 4-4-1.724-4-4 1.724-4 4-4z"/>
+    </svg>
+  </div>
+  <h1>Privacy Policy</h1>
+  <p>Meadows — Focus & Habit App</p>
+  <span class="badge">Effective: May 16, 2026</span>
+</header>
+
+<main>
+
+  <div class="summary-grid">
+    <div class="summary-tile">
+      <span class="icon">📱</span>
+      <span class="label">Local storage</span>
+      <span class="desc">Your data stays on your device</span>
+    </div>
+    <div class="summary-tile">
+      <span class="icon">🚫</span>
+      <span class="label">No ads</span>
+      <span class="desc">We never show advertisements</span>
+    </div>
+    <div class="summary-tile">
+      <span class="icon">🛡️</span>
+      <span class="label">No selling</span>
+      <span class="desc">We never sell your data</span>
+    </div>
+    <div class="summary-tile">
+      <span class="icon">🐛</span>
+      <span class="label">Crash reports</span>
+      <span class="desc">Only anonymous error data via Sentry</span>
+    </div>
+  </div>
+
+  <div class="toc">
+    <p>Contents</p>
+    <ol>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#what-we-collect">What data we collect</a></li>
+      <li><a href="#local-data">Data stored on your device</a></li>
+      <li><a href="#sentry">Crash reporting (Sentry)</a></li>
+      <li><a href="#gallery">Gallery access</a></li>
+      <li><a href="#identifiers">Device identifiers</a></li>
+      <li><a href="#children">Children's privacy</a></li>
+      <li><a href="#retention">Data retention</a></li>
+      <li><a href="#your-rights">Your rights</a></li>
+      <li><a href="#changes">Changes to this policy</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </div>
+
+  <section id="overview">
+    <h2><span class="num">1</span> Overview</h2>
+    <p>Meadows ("we", "our", "the App") is a focus and habit tracking application. We are committed to protecting your privacy. This Privacy Policy explains what information we collect, why we collect it, and how we use it.</p>
+    <div class="highlight">Meadows is designed to work offline. The vast majority of your data never leaves your device.</div>
+  </section>
+
+  <section id="what-we-collect">
+    <h2><span class="num">2</span> What data we collect</h2>
+    <p>Here is a complete summary of data collected by Meadows:</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Where stored</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tasks, tags, sessions, coins, animals, habitat</td>
+          <td><span class="pill pill-local">On device</span></td>
+          <td>Core app functionality</td>
+        </tr>
+        <tr>
+          <td>Display name</td>
+          <td><span class="pill pill-local">On device</span></td>
+          <td>Personalisation</td>
+        </tr>
+        <tr>
+          <td>Profile picture (from your gallery)</td>
+          <td><span class="pill pill-local">On device</span></td>
+          <td>Personalisation</td>
+        </tr>
+        <tr>
+          <td>App preferences and settings</td>
+          <td><span class="pill pill-local">On device</span></td>
+          <td>Remembering your choices</td>
+        </tr>
+        <tr>
+          <td>Randomly generated device UUID</td>
+          <td><span class="pill pill-local">On device</span></td>
+          <td>Identifying your local data</td>
+        </tr>
+        <tr>
+          <td>Anonymous crash reports and error logs</td>
+          <td><span class="pill pill-sentry">Sentry servers</span></td>
+          <td>Fixing bugs and improving stability</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>We do not collect your name, email address, phone number, location, or any other personally identifying information.</p>
+  </section>
+
+  <section id="local-data">
+    <h2><span class="num">3</span> Data stored on your device</h2>
+    <p>All app data — including your tasks, focus sessions, tags, coins, animals, and habitat — is stored locally in a SQLite database on your device using PowerSync. This data:</p>
+    <ul>
+      <li>Does not leave your device</li>
+      <li>Is not backed up to our servers</li>
+      <li>Is not accessible to us</li>
+      <li>Is deleted when you uninstall the App or use the in-app reset function</li>
+    </ul>
+    <div class="highlight">If you clear the app data or uninstall Meadows, all locally stored data is permanently lost. We cannot recover it for you.</div>
+  </section>
+
+  <section id="sentry">
+    <h2><span class="num">4</span> Crash reporting (Sentry)</h2>
+    <p>We use <strong>Sentry</strong> (sentry.io) to automatically detect and report crashes and errors. This helps us identify and fix bugs quickly.</p>
+    <p>Sentry may collect the following when a crash or error occurs:</p>
+    <ul>
+      <li>The type of error and the stack trace (technical code path)</li>
+      <li>Device type and operating system version</li>
+      <li>App version</li>
+      <li>A randomly generated anonymous identifier (see Section 6)</li>
+      <li>Performance timing data</li>
+    </ul>
+    <p>Sentry does <strong>not</strong> collect:</p>
+    <ul>
+      <li>Your display name or any content you enter</li>
+      <li>Your profile picture</li>
+      <li>Your tasks, sessions, or any app data</li>
+      <li>Your location</li>
+    </ul>
+    <div class="warning">Sentry data is processed on Sentry's servers. Sentry's own privacy policy applies to this data and is available at <a href="https://sentry.io/privacy/" style="color: var(--amber);">sentry.io/privacy</a>.</div>
+  </section>
+
+  <section id="gallery">
+    <h2><span class="num">5</span> Gallery access</h2>
+    <p>The App requests permission to access your device's photo gallery solely to allow you to set a profile picture. Specifically:</p>
+    <ul>
+      <li>We access the gallery only when you explicitly tap to change your profile picture</li>
+      <li>The selected image is copied and stored locally on your device within the App's private storage</li>
+      <li>The image is never uploaded to any server</li>
+      <li>We do not scan, analyse, or access any other images in your gallery</li>
+    </ul>
+    <p>You can revoke gallery permission at any time through your device's Settings. Revoking permission will prevent you from changing your profile picture but will not affect any previously selected picture.</p>
+  </section>
+
+  <section id="identifiers">
+    <h2><span class="num">6</span> Device identifiers</h2>
+    <p>Meadows generates a random UUID (Universally Unique Identifier) when the App is first installed. This identifier:</p>
+    <ul>
+      <li>Is randomly generated — it is not tied to your device hardware, name, or any personal information</li>
+      <li>Is used to link your local data records together within the App</li>
+      <li>Is shared with Sentry as an anonymous session identifier to help group crash reports from the same installation</li>
+      <li>Is reset if you clear the app data or reinstall the App</li>
+    </ul>
+    <div class="highlight">Your UUID cannot be used to identify you as an individual. It is not linked to your name, email, or device identity.</div>
+  </section>
+
+  <section id="children">
+    <h2><span class="num">7</span> Children's privacy</h2>
+    <p>Meadows is designed for users of all ages, including children. We take children's privacy seriously:</p>
+    <ul>
+      <li>We do not knowingly collect personal information from children under 13 without parental consent</li>
+      <li>The only data that leaves the device is anonymous crash data sent to Sentry — this contains no personal information</li>
+      <li>We do not use data for advertising or profiling</li>
+      <li>Parents or guardians may contact us at any time to ask questions about the data their child's device may have shared</li>
+    </ul>
+    <p>If you believe a child has used the App without appropriate consent, please contact us and we will address your concern.</p>
+  </section>
+
+  <section id="retention">
+    <h2><span class="num">8</span> Data retention</h2>
+    <p><strong>Local data</strong> — stored on your device indefinitely until you uninstall the App, clear app data, or use the in-app reset function.</p>
+    <p><strong>Sentry crash data</strong> — retained by Sentry according to their data retention policy (typically 90 days). We do not control this retention period. Please refer to Sentry's privacy policy for details.</p>
+    <p>We do not retain any personal data on our own servers because we do not collect any.</p>
+  </section>
+
+  <section id="your-rights">
+    <h2><span class="num">9</span> Your rights</h2>
+    <p>Because all your app data is stored locally on your device, you have full control over it:</p>
+    <ul>
+      <li><strong>Access</strong> — all your data is visible within the App</li>
+      <li><strong>Deletion</strong> — you can delete individual items within the App, or reset all data using the in-app reset function, or uninstall the App</li>
+      <li><strong>Portability</strong> — your data is on your device; you control it</li>
+    </ul>
+    <p>For any questions about Sentry's data (anonymous crash reports), you may contact us and we will do our best to assist, or contact Sentry directly.</p>
+    <p>Depending on your jurisdiction (including the EU/EEA under GDPR, California under CCPA), you may have additional rights. Please contact us if you wish to exercise these rights.</p>
+  </section>
+
+  <section id="changes">
+    <h2><span class="num">10</span> Changes to this policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we do, we will update the effective date at the top of this page and notify you within the App before the new policy takes effect.</p>
+    <p>We encourage you to review this page periodically. Continued use of the App after changes are posted constitutes your acceptance of the updated policy.</p>
+  </section>
+
+  <section id="contact">
+    <h2><span class="num">11</span> Contact</h2>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your data, please reach out:</p>
+    <div class="contact-box">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+      </svg>
+      <span>Email: <a href="mailto:meadowsappteam@gmail.com">meadowsappteam@gmail.com</a></span>
+    </div>
+    <p style="margin-top: 14px; font-size: 14px; color: var(--text-secondary);">We aim to respond to all enquiries within 5 business days. We only communicate in English at this time.</p>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Meadows. All rights reserved.</p>
+  <p style="margin-top: 6px;"><a href="terms_of_service.html" style="color: var(--primary); text-decoration: none;">Terms of Service</a></p>
+</footer>
+
+</body>
+</html>
